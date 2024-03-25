@@ -51,3 +51,21 @@ h1, h3{
     background-color: #4E4E50;
     
 }
+
+.kodfun-galeri {
+    display: flex;   
+    height: 20rem;   
+    gap: 1rem;
+    }
+    
+.kodfun-galeri > div {   
+    flex: 1;    
+    border-radius: 1rem;  
+    background-position: center;   
+    background-repeat: no-repeat;   
+    background-size: cover;   
+    transition: flex .8s ease-in-out;   
+}   
+.kodfun-galeri > div:hover {   
+    flex: 5;   
+}
