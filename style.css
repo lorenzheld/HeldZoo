@@ -1,16 +1,12 @@
-.mytitle{
+.mytitle, h3{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1%;
-    border-radius: 3%;
+    border-radius: 30px;
+    color:#C3070F
 }
-
-.mybody{
-    background-color: antiquewhite;
-}
-
 body{
-    background-color: antiquewhite;
+    background-color: #1A1A1D;
     border-radius: 3%;
 }
 .pd5{
@@ -21,4 +17,37 @@ body{
 }
 .pd1{
     padding: 1%;
+}
+p, .col-sm{
+    color:#C3070F
+}
+.card-body{
+    background-color: #1A1A1D;
+    color: #C3070F
+}
+.card{
+    background-color: #4E4E50;
+    padding: 1%;
+}
+.nav-link, .navbar-brand{
+    color: #C3070F;
+}
+.dropdown-menu, .dropdown-item{
+    color: #C3070F;
+    background-color: #4E4E50;
+}
+h1, h3{
+    background-color: #4E4E50;
+
+}
+.mydiv{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.rounded-2{
+    color: #C3070F;
+    background-color: #4E4E50;
+    
 }
