@@ -69,3 +69,21 @@ h1, h3{
 .kodfun-galeri > div:hover {   
     flex: 5;   
 }
+
+
+.card{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+@keyframes ischegal{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
