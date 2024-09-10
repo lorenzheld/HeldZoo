@@ -1,0 +1,25 @@
+#cloud-config
+users:
+  - name: user
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkBouZUVmVqrhraDtZwEhBTfW2eFKVFG2e7FHS4wtOvjSNhWoerZfrtbGvestPhp0xsGtuQ2LXxoRVF7KyZ6/ylK1ilor16VGpaWOPdrl/eeF2bvIwF5xNVtCxZjNdOfkiMRimd2tW4DshpsfXnu3K72Y/krXpzo/vSazGjXaz9HRtjx07dfB7w1R6fGx+vulItaOEAEXqG1WSvz/FIuH6QgUvSFZdFLsv8VZNxG1kNJ4EeGm51C272dk1f7ulzNWeDhMZQQv3WovnChzV1kNhqhvaIM6nV+k11eecLQGENTPYYlZucg+YpDxCO+4SOOhmCGpV7w8TWr0WxyT/0MP2A5CBC07MYao94x4fOFExBWlr59olDllI4INcoLrNZbGkd88rBCU8y9PNHkgyZ4vexi2SFeseKQI01xLbtLojFIdGrW5e4R08r/bDGB6iJTjDD0XdhDBIRkFQVh060134Yac5DA0pLKT0prNdn4uMhtNjgvacJ822L1SPrO8/rMM= heldl@LorenzHeld
+
+
+
+package_update: true
+package_upgrade: true
+
+
+#packages
+packages:
+  - openjdk-17-jdk
+  - maven
+
+wait-for-network: true
+
+runcmd:
+  - sudo -u user git clone https://gitlab.com/bbwrl/m346-ref-card-01.git
+  - sudo -u user bash -c "cd m346-ref-card-01 && mvn package"
+  - sudo -u user bash -c "nohup java -jar m346-ref-card-01/target/architecture-refcard-01-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &"
